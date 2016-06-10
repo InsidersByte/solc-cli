@@ -1,16 +1,12 @@
 #!/usr/bin/env node
 
+require('babel-polyfill');
+
 const solc = require('solc');
 const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
 const cli = require('cli').enable('status');
-
-function* entries(obj) {
-    for (const key of Object.keys(obj)) {
-        yield { key, value: obj[key] };
-    }
-}
 
 cli.parse({
     'out-dir': [false, 'Output directory for the compiled contracts', 'path', './contracts'],
@@ -43,7 +39,7 @@ cli.main((args, { 'out-dir': outputDirectory, optimise }) => {
             throw compiledContracts.errors;
         }
 
-        for (const { key, value } of entries(compiledContracts.contracts)) {
+        for (const [key, value] of Object.entries(compiledContracts.contracts)) {
             fs.writeFile(path.join(outputDirectoryPath, `${key}.bin`), value.bytecode);
             fs.writeFile(path.join(outputDirectoryPath, `${key}.abi`), value.interface);
         }
