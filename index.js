@@ -13,11 +13,11 @@ function* entries(obj) {
 }
 
 cli.parse({
-    'output-dir': ['d', 'Compile an input directory of contracts into an output directory', 'path', './contracts'],
-    optimise: [false, 'Activate the solc optimiser'],
+    'out-dir': [false, 'Output directory for the compiled contracts', 'path', './contracts'],
+    optimise: [false, 'If present activate the solc optimiser'],
 });
 
-cli.main((args, { 'output-dir': outputDirectory, optimise }) => {
+cli.main((args, { 'out-dir': outputDirectory, optimise }) => {
     if (args.length === 0) {
         cli.fatal('a contract file is required');
     }
