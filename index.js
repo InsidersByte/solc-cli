@@ -22,11 +22,13 @@ cli.main((args, { 'out-dir': outputDirectory, optimise }) => {
         cli.fatal('only one contract file is supported');
     }
 
+    const currentPath = process.cwd();
+
     const contractName = args[0];
-    const contractPath = path.join(__dirname, contractName);
+    const contractPath = path.join(currentPath, contractName);
     const contract = fs.readFileSync(contractPath, 'utf8');
 
-    const outputDirectoryPath = path.join(__dirname, outputDirectory);
+    const outputDirectoryPath = path.join(currentPath, outputDirectory);
 
     mkdirp(outputDirectoryPath, (error) => {
         if (error) {
