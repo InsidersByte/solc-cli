@@ -13,7 +13,7 @@
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "babel ./index.js --out-dir dist",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx .",
+    "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint:js -- --fix",
     "test": "npm run lint",
     "prepublish": "npm run build && npm test"
@@ -33,13 +33,13 @@
   },
   "homepage": "https://github.com/InsidersByte/solc-cli#readme",
   "dependencies": {
+    "babel-polyfill": "^6.9.1",
     "cli": "^0.11.2",
     "mkdirp": "^0.5.1",
     "solc": "^0.3.4"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
-    "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-0": "^6.5.0",
     "eslint": "^2.11.1",
