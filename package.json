@@ -1,0 +1,38 @@
+{
+  "name": "solc-cli",
+  "version": "0.1.0",
+  "description": "solc command line interface",
+  "preferGlobal": true,
+  "bin": {
+    "solc": "index.js"
+  },
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx .",
+    "lint:fix": "npm run lint:js -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://insidersbyte@github.com/InsidersByte/solc-cli.git"
+  },
+  "keywords": [
+    "solc",
+    "solc-cli"
+  ],
+  "author": "Jonathon Kelly <jonathon.kelly@insidersbyte.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InsidersByte/solc-cli/issues"
+  },
+  "homepage": "https://github.com/InsidersByte/solc-cli#readme",
+  "dependencies": {
+    "cli": "^0.11.2",
+    "mkdirp": "^0.5.1",
+    "solc": "^0.3.4"
+  },
+  "devDependencies": {
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.1"
+  }
+}
