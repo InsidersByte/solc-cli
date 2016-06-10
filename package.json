@@ -6,6 +6,9 @@
   "bin": {
     "solc": "./dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
