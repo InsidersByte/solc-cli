@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/insidersbyte/solc-cli.svg)](https://david-dm.org/insidersbyte/solc-cli)
 [![devDependency Status](https://david-dm.org/insidersbyte/solc-cli/dev-status.svg)](https://david-dm.org/insidersbyte/solc-cli#info=devDependencies)
 
-[![NPM](https://nodei.co/npm/solc-cli.png)](https://nodei.co/npm/solc-cli/)
+[![NPM](https://nodei.co/npm/solc-cli.png?downloads=true&downloadRank=true)](https://nodei.co/npm/solc-cli/)
 
 Command line interface for https://github.com/ethereum/solc-js
 
