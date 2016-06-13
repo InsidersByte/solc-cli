@@ -6,7 +6,7 @@ const solc = require('solc');
 const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
-const cli = require('cli').enable('status');
+const cli = require('cli').enable('status', 'glob');
 
 cli.parse({
     'out-dir': [false, 'Output directory for the compiled contracts', 'path', './contracts'],
