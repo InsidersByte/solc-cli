@@ -15,7 +15,7 @@ Command line interface for https://github.com/ethereum/solc-js
 $ npm install --save-dev solc solc-cli
 ```
 
-> Solc is a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) so needs to be installed alongside this cli.
+> Solc is a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) so needs to be installed alongside this cli
 
 ## Usage
 
