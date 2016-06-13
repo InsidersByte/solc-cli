@@ -55,4 +55,4 @@ $ solc --name=value
 |----------|-------------|---------------------------------------------|
 | out-dir  | ./contracts | Output directory for the compiled contracts |
 | optimise | null        | If present activates the solc optimiser     |
-| debug    | null        | If present shows debug messages             |
+| debug    | null        | If present shows the debug messages         |
