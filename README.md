@@ -18,10 +18,32 @@ $ npm install --save-dev solc-cli
 ## Usage
 
 ```bash
-$ solc [options] <file> 
+$ solc [options] [files]
 ```
 
-> Only one file is supported at the moment
+> Supports Globs
+
+## Examples
+
+**Single File**
+
+```bash
+solc example.sol
+```
+
+**Multiple Files**
+
+```bash
+solc example.sol anotherExample.sol
+```
+
+**Glob**
+
+```bash
+solc *.sol
+```
+
+> Uses https://github.com/isaacs/node-glob as the glob library
 
 ## Options
 
@@ -32,4 +54,5 @@ $ solc --name=value
 | Option   | Default     | Description                                 |
 |----------|-------------|---------------------------------------------|
 | out-dir  | ./contracts | Output directory for the compiled contracts |
-| optimise | null        | If present activate the solc optimiser      |
+| optimise | null        | If present activates the solc optimiser     |
+| debug    | null        | If present shows debug messages             |
