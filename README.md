@@ -12,7 +12,7 @@ Command line interface for https://github.com/ethereum/solc-js
 ## Installation
 
 ```bash
-$ npm install --save-dev solc-cli
+$ npm install solc-cli -g
 ```
 
 ## Usage
@@ -43,7 +43,7 @@ solc example.sol anotherExample.sol
 solc *.sol
 ```
 
-> Uses https://github.com/isaacs/node-glob as the glob library
+> Uses https://github.com/isaacs/node-glob
 
 ## Options
 
