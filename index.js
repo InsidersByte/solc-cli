@@ -15,18 +15,19 @@ cli.parse({
 
 cli.main((args, { 'out-dir': outputDirectory, optimise }) => {
     if (args.length === 0) {
-        cli.fatal('a contract file is required');
-    }
-
-    if (args.length > 1) {
-        cli.fatal('only one contract file is supported');
+        cli.fatal('a file is required');
     }
 
     const currentPath = process.cwd();
 
-    const contractName = args[0];
-    const contractPath = path.join(currentPath, contractName);
-    const contract = fs.readFileSync(contractPath, 'utf8');
+    const sources = {};
+
+    for (const fileName of args) {
+        const filePath = path.join(currentPath, fileName);
+        const file = fs.readFileSync(filePath, 'utf8');
+
+        sources[fileName] = file;
+    }
 
     const outputDirectoryPath = path.join(currentPath, outputDirectory);
 
@@ -35,7 +36,7 @@ cli.main((args, { 'out-dir': outputDirectory, optimise }) => {
             throw error;
         }
 
-        const compiledContracts = solc.compile(contract, optimise);
+        const compiledContracts = solc.compile({ sources }, optimise);
 
         if (compiledContracts.errors) {
             throw compiledContracts.errors;
