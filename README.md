@@ -12,16 +12,16 @@ Command line interface for https://github.com/ethereum/solc-js
 ## Installation
 
 ```bash
-$ npm install solc-cli -g
+$ npm install --save-dev solc solc-cli
 ```
+
+> Solc is a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) so needs to be installed alongside this cli.
 
 ## Usage
 
 ```bash
 $ solc [options] [files]
 ```
-
-> Supports Globs
 
 ## Examples
 
